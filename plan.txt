@@ -1,0 +1,26 @@
+		Plan
+
+[X] Come up with features to add
+    - Signup or Login page
+    - Header (name, menu, login/profile)
+    - Menu (Tasks, Help)
+        - Tasks
+            - Today (the default page when logged in)
+            - Habits
+            - Routines
+            - To-do
+[ ] Come up with a name
+[ ] Design
+    [ ] Mobile
+    [ ] Desktop
+[X] Makes plans for the features
+[ ] Set up the development and deployment
+[ ] Signup or Login page (no functionality yet)
+[ ] Main page
+    [ ] Tasks
+        [ ] Today
+        [ ] Habits
+        [ ] Routines
+        [ ] To-do
+[ ] Help page
+[ ] Profile page

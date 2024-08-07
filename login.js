@@ -3,12 +3,12 @@ user = {
   password: "password1234"
 }
 
-
 function redirect() {
   if (localStorage.getItem("isLoggedIn") == "true") {
     window.location.href = "/today.html";
   }
 }
+redirect();
 
 function check() {
   let usernameInput = document.getElementById('username');

@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taskmaster</title>
+  <title>Taskmaster | Today</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="today-style.css">
 </head>
 <body>
   <header>
     <div class="header-content">
       <div class="header-left">
         <div class="header-desktop">
-          <div class="logo-desktop">
-            TASKMASTER
-          </div>
+          <a href="/">
+            <div class="logo-desktop">
+              TASKMASTER
+            </div>
+          </a>
           <ul id="desktop-menu">
             <li><a href="/today.html">Today</a></li>
             <li><a href="/tasks.html">Tasks</a></li>
@@ -51,41 +53,47 @@
     <script src="menu-script.js"></script>
   </header>
   <main>
-    <h1>Today</h1>
-    <button id='add-task-prompt-button' onclick="addTaskPrompt()">+</button>
-    <div id="dark-background"></div>
-    <div id="add-task-prompt">
-      <h2>Add a Task</h2>
-      <div class="add-task-input">
-        <p id="add-task-title-error">Title is required to add a task.</p>
-        <label for="add-task-title">Title<super>*</super>:</label>
-        <input type="text" name="add-task-title" id="add-task-title">
-        <label for="add-task-desc">Description:</label>
-        <input type="text" name="add-task-desc" id="add-task-desc">
+    <div class="group-collection">
+      <h1>Today</h1>
+      <button id='add-task-prompt-button' onclick="addTaskPrompt()">+</button>
+      <div id="dark-background"></div>
+      <div id="add-task-prompt">
+        <h2>Add a Task</h2>
+        <div class="add-task-input">
+          <p id="add-task-title-error">Title is required to add a task.</p>
+          <label for="add-task-title">Title<super>*</super>:</label>
+          <input type="text" name="add-task-title" id="add-task-title">
+          <label for="add-task-desc">Description:</label>
+          <input type="text" name="add-task-desc" id="add-task-desc">
+          <label for="add-task-date">Date</label>
+          <input type="date" name="add-task-date" id="add-task-date">
+        </div>
+        <div class="add-task-buttons">
+          <button onclick="addTask('prompt')">Add</button>
+          <button onclick="addTaskPromptCancel()">Cancel</button>
+        </div>
       </div>
-      <div class="add-task-buttons">
-        <button onclick="addTask('prompt')">Add</button>
-        <button onclick="addTaskPromptCancel()">Cancel</button>
+      <div id="edit-task-prompt">
+        <h2>Edit a Task</h2>
+        <div class="edit-task-input">
+          <label for="edit-task-title">Title:</label>
+          <input type="text" name="edit-task-title" id="edit-task-title">
+          <label for="edit-task-desc">Description:</label>
+          <input type="text" name="edit-task-desc" id="edit-task-desc">
+          <label for="edit-task-date">Date:</label>
+          <input type="date" name="edit-task-date" id="edit-task-date">
+        </div>
+        <div class="edit-task-buttons">
+          <button onclick="editTask()">Save</button>
+          <button onclick="editTaskPromptCancel()">Cancel</button>
+        </div>
       </div>
+      <div class="collection" id="today-list">
+        <input id="title" type="text" placeholder="Add a Task">
+        <div classs="task-container" id="today-list-container"></div>
+      </div>
+      <script src="today-task.js"></script>
     </div>
-    <div id="edit-task-prompt">
-      <h2>Edit a Task</h2>
-      <div class="edit-task-input">
-        <label for="edit-task-title">Title:</label>
-        <input type="text" name="edit-task-title" id="edit-task-title">
-        <label for="edit-task-desc">Description:</label>
-        <input type="text" name="edit-task-desc" id="edit-task-desc">
-      </div>
-      <div class="edit-task-buttons">
-        <button onclick="editTask()">Save</button>
-        <button onclick="editTaskPromptCancel()">Cancel</button>
-      </div>
-    </div>
-    <div class="collection" id="today-list">
-      <input id="title" type="text" placeholder="Add a Task">
-      <div classs="task-container" id="today-list-container"></div>
-    </div>
-    <script src="task.js"></script>
   </main>
   <footer>
 

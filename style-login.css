@@ -1,0 +1,60 @@
+:root {
+  --body-bg-clr: green;
+  --btn-bg-clr: lightgreen;
+  --btn-clr: black;
+  --border-radius: 10px;
+}
+
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: var(--body-bg-clr);
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 20px 10px;
+
+  & h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  & label, input {
+    display: block;
+    margin-block: 10px;
+  }
+
+  button {
+    width: 7em;
+    height: 2em;
+    margin-top: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: var(--btn-bg-clr);
+    color: var(--btn-clr);
+    cursor: pointer;
+
+    &:hover {
+      background-color: green;
+      color: white;
+    }
+  }
+}

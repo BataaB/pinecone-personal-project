@@ -14,6 +14,8 @@ inputEl.addEventListener('keypress', function(event) {
   }
 })
 
+render();
+
 function render() {
   let container = document.getElementById("today-list-container");
   container.innerHTML = "";
@@ -45,6 +47,7 @@ function render() {
     let title = document.createElement("h2");
     let node = document.createTextNode(task.title);
     title.appendChild(node);
+    title.id = task.id + '-title';
     taskText.appendChild(title);
 
     let desc = document.createElement("p");
@@ -104,6 +107,13 @@ function render() {
     taskDiv.appendChild(taskText);
 
     container.appendChild(taskDiv);
+  }
+  if (tasks.length == 0) {
+    let message = document.createElement('p');
+    let node = document.createTextNode("There are no tasks planned for today.");
+    message.appendChild(node);
+    message.id = 'empty-message';
+    container.appendChild(message);
   }
 }
 

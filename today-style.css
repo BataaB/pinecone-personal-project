@@ -1,20 +1,27 @@
 :root {
-  --body-bg-clr: white;
-  --header-bg-clr: #3C8D2F;
+  --gray0: #E6E7E6;
+  --gray1: #B2B3B2;
+  --gray2: #888888;
+  --gray3: #5E5E5E;
+  --gray4: #252525;
+
+  --body-bg-clr: var(--gray0);
+  --header-bg-clr: var(--gray3);
   --header-clr: white;
-  --hamburger-bg-clr: black;
-  --hamburger-bg-clr-odd: gray;
+  --hamburger-bg-clr: var(--gray2);
+  --hamburger-bg-clr-odd: var(--gray1);
   --hamburger-clr: white;
-  --heading-clr: green;
-  --btn-bg-clr: #77e68d;
-  --collection-bg-clr: lightgreen;
-  --input-bg-clr-green: rgba(63, 128, 38, 0.544);
-  --input-clr: black;
+  --heading-clr: var(--gray4);
+  --btn-bg-clr: var(--gray3);
+  --btn-clr: white;
+  --collection-bg-clr: var(--gray1);
+  --input-bg-clr-green: var(--gray3);
+  --input-clr: var(--gray0);
 
   --task-bg-clr: white;
   --task-bg-clr-checked: lightgray;
-  --task-chbox-bg-clr: green;
-  --task-chbox-bg-clr-checked: gray;
+  --task-chbox-bg-clr: var(--gray3);
+  --task-chbox-bg-clr-checked: var(--gray4);
   --task-title-clr: black;
   --task-desc-clr: gray;
 
@@ -24,19 +31,19 @@
 
   --dark-bg-clr: rgba(0,0,0,0.5);
 
-  --add-task-bg-clr: #6bc6ff;
+  --add-task-bg-clr: var(--gray2);
   --add-task-clr: white;
   --add-task-req-clr: red;
-  --add-task-input-bg-clr: #2661808b;
+  --add-task-input-bg-clr: var(--gray3);
   --add-task-input-clr: white;
-  --add-task-btn-bg-clr: #1e8bcf;
+  --add-task-btn-bg-clr: var(--gray3);
   --add-task-btn-clr: white;
 
-  --edit-task-bg-clr: #7ad786;
+  --edit-task-bg-clr: var(--gray2);
   --edit-task-clr: white;
-  --edit-task-input-bg-clr: #3b8c45a6;
+  --edit-task-input-bg-clr: var(--gray3);
   --edit-task-input-clr: white;
-  --edit-task-btn-bg-clr: #269d36;
+  --edit-task-btn-bg-clr: var(--gray3);
   --edit-task-btn-clr: white;
 
   --border-radius: 10px;
@@ -146,7 +153,7 @@ header {
   cursor: pointer;
 }
 #profile-extend {
-  background-color: greenyellow;
+  background-color: var(--gray2);
   position: absolute;
   top: 40px;
   right: 0px;
@@ -185,6 +192,7 @@ main {
     position: relative;
     left: 80%;
     background-color: var(--btn-bg-clr);
+    color: var(--btn-clr);
     border: none;
     border-top-right-radius: var(--border-radius);
     border-top-left-radius: var(--border-radius);
@@ -211,6 +219,9 @@ main {
     }
     & input::placeholder {
       color: var(--input-clr);
+    }
+    & input:focus {
+      outline: none;
     }
 
     & .task {

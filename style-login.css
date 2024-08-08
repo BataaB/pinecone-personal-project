@@ -1,7 +1,16 @@
 :root {
-  --body-bg-clr: green;
-  --btn-bg-clr: lightgreen;
-  --btn-clr: black;
+  --gray0: #E6E7E6;
+  --gray1: #B2B3B2;
+  --gray2: #888888;
+  --gray3: #5E5E5E;
+  --gray4: #252525;
+
+
+  --body-bg-clr: var(--gray0);
+  --card-bg-clr: var(--gray1);
+  --card-clr: white;
+  --btn-bg-clr: var(--gray2);
+  --btn-clr: white;
   --border-radius: 10px;
 }
 
@@ -25,7 +34,8 @@ main {
 }
 
 .card {
-  background-color: white;
+  background-color: var(--card-bg-clr);
+  color: var(--card-clr);
   border-radius: var(--border-radius);
   padding: 20px 10px;
 
